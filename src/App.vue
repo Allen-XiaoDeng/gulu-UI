@@ -1,15 +1,15 @@
 <template>
-  <div>hi</div>
-  <cx />
+  <div>导航栏 |
+    <router-link to="/">cx</router-link>
+    |
+    <router-link to="/xxx">cx2</router-link>
+  </div>
+  <hr/>
+  <router-view/>
 </template>
 
 <script>
-import cx from './components/cx.vue'
-
 export default {
-  name: 'App',
-  components: {
-    cx
-  }
+  name: 'app'
 }
 </script>
