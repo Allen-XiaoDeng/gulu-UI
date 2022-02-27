@@ -1,5 +1,5 @@
 <template>
-  <div class="Topnav">
+  <div class="topnav">
     <div class="logo">LOGO</div>
     <ul class="menu">
       <li>菜单1</li>
@@ -8,10 +8,12 @@
   </div>
 </template>
 <style lang="scss" scoped>
-.Topnav {
+.topnav {
   background: pink;
   display: flex;
   padding: 16px;
+  position: relative;
+  z-index: 10;
 
   > .logo {
     max-width: 6em;
