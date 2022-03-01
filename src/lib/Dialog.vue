@@ -4,11 +4,11 @@
          @click="onClickOverlay"></div>
     <div class="gulu-dialog-wrapper">
       <div class="gulu-dialog">
-        <header>标题<span @click="close" class="gulu-dialog-close"></span></header>
+        <header>
+          <slot name="title"/>
+          <span @click="close" class="gulu-dialog-close"></span></header>
         <main>
-          <p>第一行</p>
-          <p>第二行</p>
-          <p>第三行</p>
+          <slot name="content"/>
         </main>
         <footer>
           <Button level="main" @click="ok">OK</Button>
@@ -23,6 +23,7 @@ import Button from './Button.vue';
 
 export default {
   props: {
+
     visible: {
       type: Boolean,
       default: false
